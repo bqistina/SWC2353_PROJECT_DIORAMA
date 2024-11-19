@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Diorama: The Book Nook Emporium</title>
+
+    <!-- Adding Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F8F8F8;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Updated Header styles */
+        header {
+            background-color: #38040E; /* Deep Maroon */
+            color: white;
+            padding: 10px 20px; /* Reduced padding */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Smaller logo aligned to the left */
+        .logo img {
+            width: 150px;  /* Reduced width */
+            height: 50px;  /* Reduced height */
+        }
+
+        /* Navigation bar centered */
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #8F3C55; /* Muted Rose */
+        }
+
+        /* Search and Bag Icons aligned to the right */
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icons a {
+            color: #fff;
+            font-size: 1.2em;
+        }
+
+        .icons a:hover {
+            color: #8F3C55; /* Muted Rose */
+        }
+
+        /* Collection Section */
+        .collection-section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .collection-section h1 {
+            color: #38040E;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        /* Mini Header (Book Nook and Wooden Dollhouse) */
+        .mini-header {
+            font-size: 2em;
+            font-weight: bold; /* Make mini header bold */
+            color: #6F213C;
+            margin-top: 40px;
+        }
+
+        .collection-item {
+            margin-bottom: 30px;
+            transition: transform 0.2s; /* Smooth transition for hover effect */
+        }
+
+        .collection-item:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+
+        .collection-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .collection-item h3 {
+            color: #6F213C; /* Burgundy */
+            margin-top: 15px;
+        }
+
+        .collection-item p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .collection-item .btn {
+            margin-top: 10px;
+            background-color: #6F213C;
+            color: white;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #38040E; /* Deep Maroon */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <!-- Logo on the left -->
+    <div class="logo">
+        <a href="HomePage.html"><img src="Logo diorama.png" alt="Diorama Logo"></a> <!-- Wrap the logo with a link -->
+    </div>
+
+    <!-- Navigation in the center -->
+    <nav>
+        <ul>
+            <li><a href="HomePage.html">Home</a></li>
+            <li><a href="shop.html">Shop All</a></li>
+            <li><a href="Collection.html">Collections</a></li> <!-- Collection button, no dropdown -->
+            <li><a href="AboutUs.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Shopping Bag on the right -->
+    <div class="icons">
+        <a href="ShoppingCart.html"><i class="fas fa-shopping-bag"></i></a> <!-- Shopping Bag Icon -->
+		<span id="cart-counter" style="color: white; font-size: 1.2em; margin-left: 5px;">0</span><!-- Added a cart counter-->
+		<a href="SignIn.html"><i class="fas fa-user"></i></a> <!-- User Account Icon -->
+    </div>
+</header>
+
+<!-- Collection Section -->
+<div class="container collection-section">
+    <h1>Monthly Collection</h1>
+
+    <!-- Book Nook Section -->
+    <h2 class="mini-header">Book Nook</h2>
+    <div class="row">
+        <!-- Item 1 -->
+        <div class="col-md-4 collection-item">
+            <img src="pharmacist magic nook.png" alt="Magic Pharmacist Book Nook">
+            <h3>JANUARY : Magic Pharmacist Book Nook</h3>
+            <p>Step into a world of magic inspired by the enchanting landscapes of 'Harry Potter'. This whimsical book nook brings to life the charm of potion-making and spell-casting, perfect for igniting the imagination of any aspiring wizard.</p>
+            <p><strong>Price: MYR 320</strong></p> <!-- Added price here -->
+            <button class="btn btn-primary" onclick="addToCart('Magic Pharmacist Book Nook', 320, 'pharmacist magic nook.png')">Add To Cart</button>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-md-4 collection-item">
+            <img src="rose detective nook.png" alt="Detective Book Nook">
+            <h3>FEBRUARY : Detective Book Nook</h3>
+            <p>Inspired by the suspense of 'Sherlock Holmes', this nook brings the thrill of mystery-solving right to your bookshelf, perfect for lovers of intrigue and classic detective stories.</p>
+            <p><strong>Price: MYR 320</strong></p> <!-- Added price here -->
+            <button class="btn btn-primary" onclick="addToCart('Detective Book Nook', 320, 'rose detective nook.png')">Add To Cart</button>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col-md-4 collection-item">
+            <img src="sakura season nook.png" alt="Sakura Season Book Nook">
+            <h3>MARCH : Sakura Season Book Nook</h3>
+            <p>Inspired by the heartfelt moments in 'Your Name', this nook captures the fleeting beauty of cherry blossoms and the essence of connection. Experience the serenity of springtime in Japan with delicate petals that celebrate love and nostalgia.</p>
+            <p><strong>Price: MYR 280</strong></p> <!-- Added price here -->
+            <button class="btn btn-primary" onclick="addToCart('Sakura Season Book Nook', 280, 'sakura season nook.png')">Add To Cart</button>
+        </div>
+    </div>
+
+    <!-- Wooden Dollhouse Section -->
+    <h2 class="mini-header">Wooden Dollhouse</h2>
+    <div class="row">
+        <!-- Item 4 -->
+        <div class="col-md-4 collection-item">
+            <img src="alice dollhouse.png" alt="Alice Tea Wooden Dollhouse">
+            <h3>APRIL : Alice Tea Wooden Dollhouse</h3>
+            <p>Inspired by 'Alice in Wonderland', this whimsical dollhouse brings the magic of a curious tea party to life with vintage charm.</p>
+            <p><strong>Price: MYR 355</strong></p> <!-- Added price here -->
+            <button class="btn btn-primary" onclick="addToCart('Alice Tea Wooden Dollhouse', 355, 'alice dollhouse.png')">Add To Cart</button>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="col-md-4 collection-item">
+            <img src="garden dollhouse.png" alt="Garden Wooden Dollhouse">
+            <h3>MAY : Garden Wooden Dollhouse</h3>
+            <p>Inspired by 'The Secret Garden', this serene dollhouse offers a peaceful, nature-filled escape with lush greenery and cozy corners.</p>
+            <p><strong>Price: MYR 205</strong></p> <!-- Added price here -->
+            <button class="btn btn-primary" onclick="addToCart('Garden Wooden Dollhouse', 205, 'garden dollhouse.png')">Add To Cart</button>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="col-md-4 collection-item">
+            <img src="coffee shop dollhouse.png" alt="Coffee Shop Wooden Dollhouse">
+            <h3>JUNE : Coffee Shop Wooden Dollhouse</h3>
+            <p>Modeled after a cozy café, this charming dollhouse captures the warmth of shared stories and comforting coffee moments.</p>
+            <p><strong>Price: MYR 175</strong></p> <!-- Added price here -->
+            <button class="btn btn-primary" onclick="addToCart('Coffee Shop Wooden Dollhouse', 175, 'coffee shop dollhouse.png')">Add To Cart</button>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Diorama: Book Nook Emporium. All Rights Reserved.</p>
+    <p>Contact us: <a href="mailto:info@diorama.com" style="color: white; text-decoration: underline;">info@diorama.com</a> | 
+    <a href="tel:+60192664904" style="color: white; text-decoration: underline;">+(60)19-266 4904</a></p>
+    <p>Follow us on:</p>
+    <!-- Social Media Icons -->
+    <div class="social-icons" style="margin-top: 10px;">
+        <a href="https://www.instagram.com" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.pinterest.com" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-pinterest"></i>
+        </a>
+		<a href="https://www.x.com" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-x"></i> <!-- X Icon -->
+        </a>
+    </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript for Add to Cart functionality -->
+<script>
+// Function to update cart counter
+function updateCartCounter() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const cartCounter = document.getElementById('cart-counter');
+    cartCounter.textContent = cartItems.length;
+}
+
+// Function to add to cart
+function addToCart(name, price, image) {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const newItem = { name, price, image };
+    cartItems.push(newItem);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    
+    // Update UI
+    updateCartCounter();
+    
+    // Optionally, display the added item in a cart section
+    displayCartItem(newItem);
+}
+
+// Function to display the cart item in a designated area
+function displayCartItem(item) {
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cartItemDiv = document.createElement('div');
+    cartItemDiv.className = 'cart-item';
+    cartItemDiv.innerHTML = `
+        <div class="item-details">
+            <img src="${item.image}" alt="${item.name}" width="60">
+            <p>${item.name} - MYR ${item.price}</p>
+            <span class="remove-item" onclick="removeCartItem('${item.name}')">
+                <i class="fas fa-trash-alt"></i>
+            </span>
+        </div>
+    `;
+    cartItemsContainer.appendChild(cartItemDiv);
+}
+
+// Function to remove an item from the cart
+function removeCartItem(name) {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    cartItems = cartItems.filter(item => item.name !== name);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    loadCartItems(); // Refresh the displayed cart items
+    updateCartCounter(); // Update the cart counter
+}
+
+// Initialize the cart counter on page load
+document.addEventListener('DOMContentLoaded', updateCartCounter);
+</script>
+
+<!-- Cart Display Area (hidden by default) -->
+<div id="cart-items" style="display: none;"></div>
+</body>
+</html>
